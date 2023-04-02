@@ -126,6 +126,11 @@ root.geometry("1050x600+100+100")
 root.title("FarmEazy: Farmer's Friend")
 root.config(bg="white")
 
+def x():
+    root.destroy()
+    import fertilizercalculator
+    
+
 img1 = Image.open(r"images/bgDashboaard.jpg")
 img1 = img1.resize((1110, 625), Image.LANCZOS)
 photoimg1 = ImageTk.PhotoImage(img1)
@@ -179,7 +184,7 @@ lbl_footer = Label(root, text="FarmEazy: Farmer's Friend | Copyright: Group_07",
         # CropPrices = CropPrices.resize((300, 150), Image.LANCZOS)
         # CropPrices = ImageTk.PhotoImage(CropPrices)
 
-add_image_s1 = ImageTk.PhotoImage(Image.open("images/sunny.png").resize((100, 100), Image.ANTIALIAS))
+add_image_s1 = ImageTk.PhotoImage(Image.open("images/sun.png").resize((100, 100), Image.ANTIALIAS))
 btn_1 = customtkinter.CTkButton(master=root, image=add_image_s1, text="Weather Forecast", width=220, height=80,
                                         compound=TOP, border_color='black', border_width=3,
                                         command=get_weather_window)
@@ -200,7 +205,7 @@ btn_3.place(x=200, y=375)
 add_image_s4 = ImageTk.PhotoImage(Image.open("images/chemical.png").resize((100, 100), Image.ANTIALIAS))
 btn_4 = customtkinter.CTkButton(master=root, image=add_image_s4, text="Fertilizer Calculator", width=220,
                                         height=80,
-                                        compound=TOP, border_color='black', border_width=3)
+                                        compound=TOP, border_color='black', border_width=3,command=x)
 btn_4.place(x=200, y=240)
 
 add_image_s5 = ImageTk.PhotoImage(Image.open("images/wheat.png").resize((100, 100), Image.ANTIALIAS))
