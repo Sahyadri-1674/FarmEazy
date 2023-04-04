@@ -1,5 +1,6 @@
 from tkinter import *
 from tkinter import messagebox
+import tkinter as tk
 import customtkinter
 from PIL import Image,ImageTk
 from garlic import garlic_info
@@ -130,6 +131,27 @@ class crop_info:
 
         #info14_btn=Button(btn_frame1,text="LEMON",width=30,command=self.lemon_details,height=3,font=("TIMES NEW ROMAN",10,"bold"),bg="black",fg="yellow",bd=6,relief="sunken")
         #info14_btn.grid(row=7,column=0,pady=1)
+        nav_frame = tk.Frame(root, bg="#badc57")
+        nav_frame.place(relx=0,rely=0,relwidth=1,relheight=0.08)
+
+# Create a label for the title on the left corner
+        title_label = tk.Label(nav_frame, text="Farm Eazy", bg="#badc57", fg="black", padx=10,font='Helvetica 18 bold')
+        title_label.pack(side="left")
+
+# Create a frame for the buttons on the right
+        button_frame = tk.Frame(nav_frame, bg="#badc57")
+        button_frame.pack(side="right")
+
+# Create three buttons
+        button1 = tk.Button(button_frame, text="Home", bg="#badc57", fg="black", padx=10, borderwidth=0, highlightthickness=0,font='Helvetica 14 bold')
+        button1.pack(side="right", padx=10)
+
+        button2 = tk.Button(button_frame, text="Log Out", bg="#badc57", fg="black", padx=10, borderwidth=0, highlightthickness=0,font='Helvetica 14 bold')
+        button2.pack(side="right", padx=10)
+
+        button3 = tk.Button(button_frame, text="About us", bg="#badc57", fg="black", padx=10, borderwidth=0, highlightthickness=0,font='Helvetica 14 bold')
+        button3.pack(side="right", padx=10)
+        
 
 
         
