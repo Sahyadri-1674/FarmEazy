@@ -127,6 +127,10 @@ root.geometry("1050x600+100+100")
 root.title("FarmEazy: Farmer's Friend")
 root.config(bg="white")
 
+def callCropPrices():
+    root.destroy()
+    import CropPrice
+
 def x():
     root.destroy()
     import fertilizercalculator
@@ -212,7 +216,7 @@ btn_4.place(x=200, y=240)
 add_image_s5 = ImageTk.PhotoImage(Image.open("images/wheat.png").resize((100, 100), Image.ANTIALIAS))
 btn_5 = customtkinter.CTkButton(master=root, image=add_image_s5, text="Crop Market Prices", width=220,
                                         height=80,
-                                        compound=TOP, border_color='black', border_width=3)
+                                        compound=TOP, border_color='black', border_width=3,command=callCropPrices)
 btn_5.place(x=700, y=105)
 
 add_image_s6 = ImageTk.PhotoImage(Image.open("images/harvest.png").resize((100, 100), Image.ANTIALIAS))
