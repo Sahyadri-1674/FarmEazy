@@ -23,6 +23,7 @@ def go_home():
     weather.destroy()
     import newDashboard
 
+
 def currWeatherIcon(location):
     currtime = datetime.now()
     currhour = currtime.hour

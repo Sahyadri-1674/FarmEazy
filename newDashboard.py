@@ -122,6 +122,13 @@ def get_weather_window():
     root.destroy()
     import weather
 
+def get_guidance_window():
+    root.destroy()
+    import info
+
+def schemes():
+    root.destroy()
+    import Schemes
 root = customtkinter.CTk()
 root.geometry("1050x600+100+100")
 root.title("FarmEazy: Farmer's Friend")
@@ -198,7 +205,7 @@ btn_1.place(x=200, y=105)
 add_image_s2 = ImageTk.PhotoImage(Image.open("images/DashGrant.png").resize((100, 100), Image.ANTIALIAS))
 btn_2 = customtkinter.CTkButton(master=root, image=add_image_s2, text="Schemes & Magazines", width=220,
                                         height=80,
-                                        compound=TOP, border_color='black', border_width=3)
+                                        compound=TOP,command=schemes ,border_color='black', border_width=3)
 btn_2.place(x=450, y=105)
 
 add_image_s3 = ImageTk.PhotoImage(Image.open("images/seeds.png").resize((100, 100), Image.ANTIALIAS))
@@ -222,7 +229,7 @@ btn_5.place(x=700, y=105)
 add_image_s6 = ImageTk.PhotoImage(Image.open("images/harvest.png").resize((100, 100), Image.ANTIALIAS))
 btn_6 = customtkinter.CTkButton(master=root, image=add_image_s6, text="Crop Guide", width=220,
                                         height=80,
-                                        compound=TOP, border_color='black', border_width=3)
+                                        compound=TOP, command=get_guidance_window,border_color='black', border_width=3)
 btn_6.place(x=450, y=240)
 
 

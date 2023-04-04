@@ -21,6 +21,10 @@ df = pd.read_csv("./ttkinter/npk.csv")
 # Set the "Crop" column as the index
 df.set_index('Crop', inplace=True)
 
+def go_home():
+    root.destroy()
+    import newDashboard
+
 def cal():
     area=float(area_entry.get())
     input_crop =selected_option.get()
@@ -89,7 +93,7 @@ button_frame = tk.Frame(nav_frame, bg="#badc57")
 button_frame.pack(side="right")
 
 # Create three buttons
-button1 = tk.Button(button_frame, text="Home", bg="#badc57", fg="black", padx=10, borderwidth=0, highlightthickness=0,font='Helvetica 14 bold')
+button1 = tk.Button(button_frame, text="Home", bg="#badc57", fg="black", padx=10, borderwidth=0, highlightthickness=0,font='Helvetica 14 bold',command=go_home)
 button1.pack(side="right", padx=10)
 
 button2 = tk.Button(button_frame, text="Log Out", bg="#badc57", fg="black", padx=10, borderwidth=0, highlightthickness=0,font='Helvetica 14 bold')
