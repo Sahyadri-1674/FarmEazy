@@ -1,4 +1,5 @@
 from tkinter import *
+import tkinter as tk
 from PIL import Image,ImageTk
 from info import crop_info
 #import PIL.Image
@@ -22,6 +23,26 @@ class Seeds:
         #main_frame.place(x=10,y=250,width=1000,height=400)
 
     #---------button_frame----------
+        nav_frame = tk.Frame(root, bg="#badc57")
+        nav_frame.place(relx=0,rely=0,relwidth=1,relheight=0.08)
+
+# Create a label for the title on the left corner
+        title_label = tk.Label(nav_frame, text="Farm Eazy", bg="#badc57", fg="black", padx=10,font='Helvetica 18 bold')
+        title_label.pack(side="left")
+
+# Create a frame for the buttons on the right
+        button_frame = tk.Frame(nav_frame, bg="#badc57")
+        button_frame.pack(side="right")
+
+# Create three buttons
+        button1 = tk.Button(button_frame, text="Home", bg="#badc57", fg="black", padx=10, borderwidth=0, highlightthickness=0,font='Helvetica 14 bold')
+        button1.pack(side="right", padx=10)
+
+        button2 = tk.Button(button_frame, text="Log Out", bg="#badc57", fg="black", padx=10, borderwidth=0, highlightthickness=0,font='Helvetica 14 bold')
+        button2.pack(side="right", padx=10)
+
+        button3 = tk.Button(button_frame, text="About us", bg="#badc57", fg="black", padx=10, borderwidth=0, highlightthickness=0,font='Helvetica 14 bold')
+        button3.pack(side="right", padx=10)
         
         btn_frame=Frame(self.root,bd=4,relief=RIDGE,bg="cyan")
         btn_frame.place(x=500,y=300,width=230,height=170)
