@@ -4,7 +4,7 @@ import ast
 import pymysql
 def nextpage():
     window.destroy()
-    import loginpage
+    import loginpage2
 def clear():
     email.delete(0,END)
     user.delete(0, END)
