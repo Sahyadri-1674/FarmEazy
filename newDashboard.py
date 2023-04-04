@@ -185,7 +185,7 @@ lbl_footer = Label(root, text="FarmEazy: Farmer's Friend | Copyright: Group_07",
         # CropPrices = CropPrices.resize((300, 150), Image.LANCZOS)
         # CropPrices = ImageTk.PhotoImage(CropPrices)
 
-add_image_s1 = ImageTk.PhotoImage(Image.open("images/sun.png").resize((100, 100), Image.ANTIALIAS))
+add_image_s1 = ImageTk.PhotoImage(Image.open("images/sunny.png").resize((100, 100), Image.ANTIALIAS))
 btn_1 = customtkinter.CTkButton(master=root, image=add_image_s1, text="Weather Forecast", width=220, height=80,
                                         compound=TOP, border_color='black', border_width=3,
                                         command=get_weather_window)
