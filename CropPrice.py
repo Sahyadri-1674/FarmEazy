@@ -215,14 +215,14 @@ class MyDialog(QtWidgets.QDialog):
             print(e)
 
 
-if __name__ == "__main__":
-    app = QtWidgets.QApplication(sys.argv)
+# if __name__ == "__main__":
+app = QtWidgets.QApplication(sys.argv)
 
     # Create and show the dialog
-    dialog = MyDialog()
-    dialog.setWindowFlag(Qt.WindowMinimizeButtonHint, True)
-    dialog.setWindowFlag(Qt.WindowMaximizeButtonHint, True)
-    dialog.show()
+dialog = MyDialog()
+dialog.setWindowFlag(Qt.WindowMinimizeButtonHint, True)
+dialog.setWindowFlag(Qt.WindowMaximizeButtonHint, True)
+dialog.show()
 
-    sys.exit(app.exec_())
+sys.exit(app.exec_())
 
