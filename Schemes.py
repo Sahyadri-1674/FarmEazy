@@ -21,6 +21,9 @@ def S5():
 def S6():
     webbrowser.open('https://drive.google.com/file/d/1wlaVvl2tZW12NCAw-JaB9LmkQoItXNit/view?usp=share_link')
 
+def go_home():
+    root.destroy()
+    import newDashboard
 
 customtkinter.set_appearance_mode('light')
 customtkinter.set_default_color_theme('green')
@@ -61,6 +64,29 @@ btn_5 = customtkinter.CTkButton(master=root,image=add_image_s2,text="Click Me!",
 btn_5.place(x=140,y=270)
 btn_6 = customtkinter.CTkButton(master=root,image=add_image_s3,text="Click Me!",width=190,height=40,compound=TOP,command=S6,border_color='black',border_width=2)
 btn_6.place(x=340,y=270)
+
+# Load the image
+image = Image.open("images/eco-home.png")
+
+# Remove the background
+image = image.convert("RGBA")
+data = image.getdata()
+new_data = []
+for item in data:
+    if item[0] == 255 and item[1] == 255 and item[2] == 255:
+        new_data.append((255, 255, 255, 0))
+    else:
+        new_data.append(item)
+image.putdata(new_data)
+
+# Create a PhotoImage object with transparent background
+photo_image = ImageTk.PhotoImage(image)
+
+# Create a button with the PhotoImage object
+button = Button(root, image=photo_image, bd=0, highlightthickness=0,command=go_home)
+button.place(x=650,y=20)
+
+
 
 root.mainloop()
 

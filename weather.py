@@ -19,6 +19,9 @@ weather.geometry("890x470+300+200")
 weather.configure(bg="#57adff")
 weather.resizable(False,False)
 
+def go_home():
+    weather.destroy()
+    import newDashboard
 
 def currWeatherIcon(location):
     currtime = datetime.now()
@@ -338,5 +341,26 @@ seventhimage.place(x=7,y=20)
 day7temp=Label(seventhframe,bg='#282829',fg='#fff')
 day7temp.place(x=0,y=70)
 
+# Load the image
+image = Image.open("images/home.png")
+
+# Remove the background
+image = image.convert("RGBA")
+data = image.getdata()
+new_data = []
+for item in data:
+    if item[0] == 255 and item[1] == 255 and item[2] == 255:
+        # new_data.append((60,150,255,255))
+        new_data.append((99,164,255,255))
+    else:
+        new_data.append(item)
+image.putdata(new_data)
+
+# Create a PhotoImage object with transparent background
+photo_image = ImageTk.PhotoImage(image)
+
+# Create a button with the PhotoImage object
+button = Button(weather, image=photo_image, bd=0, highlightthickness=0,activebackground='Steelblue1',command=go_home)
+button.place(x=840,y=60)
 
 weather.mainloop()
