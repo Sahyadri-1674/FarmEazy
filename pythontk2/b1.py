@@ -37,14 +37,14 @@ class Seeds:
 
         #cust_btn=Button(btn_frame,text="Seed Info",width=220,font=("times new roman",40,"bold"),bg="black",fg="gold",cursor="hand1")
         #cust_btn.grid
-        img2=Image.open(r"image\farm2.jpg")
+        img2=Image.open(r"pythontk2/image/farm2.jpg")
         img2=img2.resize((350,200),Image.ANTIALIAS)
         self.photoimg2=ImageTk.PhotoImage(img2)
 
         lbl1=Label(self.root,image=self.photoimg2,bd=4,relief=RIDGE)
         lbl1.place(x=80,y=200,width=350,height=200)
 
-        img3=Image.open(r"image\guide1.jpg")
+        img3=Image.open(r"pythontk2/image/guide1.jpg")
         img3=img3.resize((350,200),Image.ANTIALIAS)
         self.photoimg3=ImageTk.PhotoImage(img3)
 
