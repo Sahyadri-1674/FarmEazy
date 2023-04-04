@@ -16,6 +16,14 @@ import pandas as pd
 # Read the CSV file into a Pandas DataFrame
 df = pd.read_csv('x.csv')
 
+# def go_home():
+#     weather.destroy()
+#     import newDashboard
+
+def go_home():
+    weather.destroy()
+    import newDashboard2
+
 weather = Tk()
 weather.title("Buy crops directly from farmers")
 weather.geometry("890x470+300+200")
@@ -33,7 +41,7 @@ button_frame = tk.Frame(nav_frame, bg="#57adff")
 button_frame.pack(side="right")
 
 # Create three buttons
-button1 = tk.Button(button_frame, text="Home", bg="#57adff", fg="black", padx=10, borderwidth=0, highlightthickness=0,font=("Helvetica", 11,"bold"))
+button1 = tk.Button(button_frame, text="Home", bg="#57adff", fg="black", padx=10, borderwidth=0, highlightthickness=0,font=("Helvetica", 11,"bold"),command=go_home)
 button1.pack(side="right", padx=10)
 
 button2 = tk.Button(button_frame, text="Log Out", bg="#57adff", fg="black", padx=10, borderwidth=0, highlightthickness=0,font=("Helvetica", 11,"bold"))

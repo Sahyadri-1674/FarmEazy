@@ -126,6 +126,14 @@ def get_guidance_window():
     root.destroy()
     import info
 
+def get_guidance_sellcrop():
+    root.destroy()
+    import sellcrop
+
+def get_guidance_buycrop():
+    root.destroy()
+    import buycrop
+
 def schemes():
     root.destroy()
     import Schemes
@@ -232,7 +240,17 @@ btn_6 = customtkinter.CTkButton(master=root, image=add_image_s6, text="Crop Guid
                                         compound=TOP, command=get_guidance_window,border_color='black', border_width=3)
 btn_6.place(x=450, y=240)
 
+add_image_s7 = ImageTk.PhotoImage(Image.open("images/harvest.png").resize((100, 100), Image.ANTIALIAS))
+btn_7 = customtkinter.CTkButton(master=root, image=add_image_s6, text="Sell your crops", width=220,
+                                        height=80,
+                                        compound=TOP, command=get_guidance_sellcrop,border_color='black', border_width=3)
+btn_7.place(x=700, y=240)
 
 
+add_image_s8 = ImageTk.PhotoImage(Image.open("images/harvest.png").resize((100, 100), Image.ANTIALIAS))
+btn_8 = customtkinter.CTkButton(master=root, image=add_image_s6, text="buy crops and vegetables", width=220,
+                                        height=80,
+                                        compound=TOP, command=get_guidance_buycrop,border_color='black', border_width=3)
+btn_8.place(x=450, y=375)
 
 root.mainloop()

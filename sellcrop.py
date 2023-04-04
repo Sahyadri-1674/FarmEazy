@@ -22,6 +22,10 @@ bg_image = ImageTk.PhotoImage(bg_image)
 bg_label = tk.Label(root, image=bg_image)
 bg_label.place(x=0, y=0, relwidth=1, relheight=1)
 
+
+def go_home():
+    root.destroy()
+    import newDashboard
 def add_to_csv():
     # Get the user input from the entry boxes
     location =location_txt.get()
@@ -61,7 +65,7 @@ button_frame = tk.Frame(nav_frame, bg="#badc57")
 button_frame.pack(side="right")
 
 # Create three buttons
-button1 = tk.Button(button_frame, text="Home", bg="#badc57", fg="black", padx=10, borderwidth=0, highlightthickness=0,font=("Helvetica", 11,"bold"))
+button1 = tk.Button(button_frame, text="Home", bg="#badc57", fg="black", padx=10, borderwidth=0, highlightthickness=0,font=("Helvetica", 11,"bold"),command=go_home)
 button1.pack(side="right", padx=10)
 
 button2 = tk.Button(button_frame, text="Log Out", bg="#badc57", fg="black", padx=10, borderwidth=0, highlightthickness=0,font=("Helvetica", 11,"bold"))
