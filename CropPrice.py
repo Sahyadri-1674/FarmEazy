@@ -13,7 +13,7 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 from PyQt5.QtGui import QPixmap, QColor
 from PyQt5.QtWidgets import QGraphicsOpacityEffect
 from PyQt5.QtGui import QFont
-
+from PyQt5.QtCore import Qt
 class Ui_Dialog(object):
     def setupUi(self,Dialog):
         Dialog.setObjectName("Dialog")
@@ -202,6 +202,8 @@ if __name__ == "__main__":
 
     # Create and show the dialog
     dialog = MyDialog()
+    dialog.setWindowFlag(Qt.WindowMinimizeButtonHint, True)
+    dialog.setWindowFlag(Qt.WindowMaximizeButtonHint, True)
     dialog.show()
 
     sys.exit(app.exec_())
