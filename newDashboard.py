@@ -119,6 +119,7 @@ now = datetime.datetime.now
 
 
 def get_weather_window():
+    root.destroy()
     import weather
 
 root = customtkinter.CTk()
